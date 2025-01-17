@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 const Layout = () => {
   return (
-    <main className='w-screen min-h-screen absolute px-5'>
+    <main className='w-screen min-h-screen absolute'>
       <Navbar />
         <Outlet />
     </main>
