@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   return (
     <nav className='w-full h-[10vh] bg-white-10/5 backdrop-blur-lg flex justify-between items-center px-4 flex fixed top-0 z-50'>
       <h2 className='text-[2vw] font-bold font-afacad'>Flow</h2>
@@ -15,7 +18,11 @@ const Navbar = () => {
       </form>
       <div className="w-[10vw] px-2 py-1 flex justify-between items-center">
       <i className="ri-heart-3-line text-[1.5vw] text-gray-500 cursor-pointer"></i>
-      <button className='bg-green-300 text-zinc-900 px-3 py-1 rounded-lg'>Signup</button>
+      <button 
+      onClick = {()=> navigate('/signup')}
+      className='bg-green-300 text-zinc-900 px-3 py-1 rounded-lg'>
+        Signup
+        </button>
       </div>
     </nav>
   )
